@@ -14,18 +14,22 @@ Website ini adalah website portofolio pribadi yang dibuat sebagai media pembelaj
 #### 1. Section Navigation Bar
 ##### <img width="1021" height="59" alt="Tangkapan Layar 2026-03-01 pukul 00 29 54" src="https://github.com/user-attachments/assets/0a55ebcd-1fcf-4b7e-a5eb-4f7f8d0bcf9e" />
 ##### <img width="640" height="67" alt="Tangkapan Layar 2026-03-01 pukul 00 29 22" src="https://github.com/user-attachments/assets/8fed3057-7e4d-4e04-a8fb-6d2d214f8f72" />
+##### Section paling atas website yang isinya nama dan menu untuk pindah ke Home, About Me, dan Certificates.
 #
 
 #### 2. Section Home
 ##### <img width="1020" height="576" alt="Tangkapan Layar 2026-03-01 pukul 00 30 13" src="https://github.com/user-attachments/assets/0e74b1dd-7295-4818-a87a-3e3cac3d55ab" />
+##### Section home untuk pengenalan diri.
 #
 
 #### 3. Section About Me
 ##### <img width="1020" height="469" alt="Tangkapan Layar 2026-03-01 pukul 00 30 34" src="https://github.com/user-attachments/assets/6e5cec26-54c9-4dd6-ba0b-9f660a7d5c0b" />
+##### Section About Me berisi penjelasan lebih lengkap tentang diri disertai dengan skills dan pengalaman pribadi.
 #
 
 #### 4. Section Certificates
 ##### <img width="1021" height="479" alt="Tangkapan Layar 2026-03-01 pukul 00 30 45" src="https://github.com/user-attachments/assets/bae223fd-a94d-41ce-bcfb-8091b2aae314" />
+##### section certificates berisi tentang beberapa sertifikat pribadi.
 #
 
 ### Penjelasan Kode
