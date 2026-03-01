@@ -1,0 +1,272 @@
+/* =========================
+   GLOBAL
+========================= */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0; /* penting biar ga ada batas putih/margin */
+  font-family: 'Quicksand', sans-serif;
+  overflow-x: hidden;
+
+  /* 1 background untuk semua (nyatu) */
+  background: linear-gradient(to bottom right, #fff0f6, #ffe4f2);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 120px;
+}
+
+/* Anchor fix supaya pas */
+#about::before,
+#certificates::before {
+  content: "";
+  display: block;
+  height: 120px;
+  margin-top: -120px;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+.custom-navbar {
+  background: linear-gradient(90deg, #ff9ecf, #ff6fb5);
+  font-family: 'Baloo 2', cursive;
+}
+
+/* =========================
+   DECORATIONS (ALL SECTIONS) - BOLD + MORE
+========================= */
+section {
+  position: relative;
+  overflow: hidden;
+
+  /* bikin nyatu, ga ada “batasan” terasa */
+  padding: 90px 0;
+}
+
+/* Hero biasanya lebih tinggi */
+.home-section {
+  min-height: 100vh;
+  padding: 120px 0;
+  display: flex;
+  align-items: center;
+}
+
+/* Big blur circles */
+section::before,
+section::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  filter: blur(2px);
+}
+
+section::before {
+  width: 620px;
+  height: 620px;
+  top: -260px;
+  left: -260px;
+  background: radial-gradient(circle, rgba(255,105,180,0.45) 0%, rgba(255,105,180,0) 70%);
+}
+
+section::after {
+  width: 520px;
+  height: 520px;
+  bottom: -230px;
+  right: -230px;
+  background: radial-gradient(circle, rgba(255,159,207,0.40) 0%, rgba(255,159,207,0) 70%);
+}
+
+/* Extra layer: dots + small circles */
+.section-decor {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+
+  background:
+    radial-gradient(circle at 75% 35%, rgba(255,111,181,0.28) 0%, rgba(255,111,181,0) 55%),
+    radial-gradient(circle at 25% 75%, rgba(255,182,193,0.25) 0%, rgba(255,182,193,0) 55%),
+    radial-gradient(circle, rgba(255,111,181,0.22) 1.3px, transparent 1.3px);
+
+  background-size: auto, auto, 32px 32px;
+}
+
+/* Konten selalu di atas dekor */
+section > .container,
+section > .container-fluid {
+  position: relative;
+  z-index: 2;
+}
+
+/* Semua section transparan biar benar-benar nyatu */
+.home-section,
+#about,
+#certificates {
+  background: transparent;
+}
+
+/* =========================
+   HERO IMAGE (float + hover glow)
+========================= */
+.hero-img {
+  width: 340px;
+  height: 340px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 10px solid #ff9ecf;
+  box-shadow: 0 0 30px rgba(255, 111, 181, 0.5);
+  transition: all 0.4s ease;
+  animation: float 4s ease-in-out infinite;
+}
+
+.hero-img:hover {
+  box-shadow: 0 0 85px rgba(255, 105, 180, 0.9);
+  transform: scale(1.06);
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-14px); }
+  100% { transform: translateY(0px); }
+}
+
+/* HERO TEXT */
+.home-title {
+  font-family: 'Baloo 2', cursive;
+  font-size: 52px;
+  color: #ff4fa3;
+  font-weight: 700;
+}
+
+.home-subtitle {
+  font-weight: 700;
+  color: #444;
+}
+
+.home-desc {
+  max-width: 520px;
+  color: #555;
+}
+
+/* BUTTON */
+.btn-primary {
+  background-color: #ff6fb5;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 25px;
+  font-weight: 700;
+}
+
+.btn-primary:hover {
+  background-color: #ff4fa3;
+}
+
+/* =========================
+   ABOUT + HEADINGS
+========================= */
+h2, h4 {
+  font-family: 'Baloo 2', cursive;
+  color: #ff4fa3;
+}
+
+/* PROGRESS */
+.progress {
+  height: 20px;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.progress-bar {
+  background-color: #ff6fb5 !important;
+  font-weight: 700;
+}
+
+/* =========================
+   CERTIFICATES
+========================= */
+.certificate-card {
+  border: none;
+  border-radius: 20px;
+  transition: 0.3s;
+  overflow: hidden;
+}
+
+.certificate-card img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  padding: 10px;
+  background-color: #fff;
+}
+
+.certificate-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(255, 111, 181, 0.35);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .hero-img {
+    width: 230px;
+    height: 230px;
+    margin-bottom: 25px;
+  }
+
+  .home-title {
+    font-size: 36px;
+    text-align: center;
+  }
+
+  .home-subtitle,
+  .home-desc {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* decor lebih kecil biar pas di hp */
+  section::before {
+    width: 420px;
+    height: 420px;
+    top: -190px;
+    left: -190px;
+  }
+
+  section::after {
+    width: 360px;
+    height: 360px;
+    bottom: -170px;
+    right: -170px;
+  }
+
+  section {
+    padding: 70px 0;
+  }
+
+  .home-section {
+    padding: 110px 0;
+  }
+}
+
+/* NAVBAR GLOW HOVER (BRAND + MENU) */
+.navbar-brand,
+.navbar-nav .nav-link {
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.navbar-brand:hover,
+.navbar-nav .nav-link:hover {
+  transform: scale(1.08);
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.8),
+               0 0 25px rgba(255, 182, 193, 0.9);
+}

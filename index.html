@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Web Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#home">Ravina Eka Adiya</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
+          <li class="nav-item"><a class="nav-link" href="#certificates">Certificates</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section id="home" class="home-section">
+    <div class="section-decor"></div>
+
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center mb-4 mb-md-0">
+          <img src="img/rvn.jpg" alt="Foto Profil" class="hero-img" />
+        </div>
+        <div class="col-md-6 text-center text-md-start">
+          <h1 class="home-title">Hallo, Saya Ravina</h1>
+          <h4 class="home-subtitle mt-3">Mahasiswi Sistem Informasi</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="py-5">
+    <div class="section-decor"></div>
+
+    <div class="container">
+      <h2 class="text-center mb-5">About Me</h2>
+
+      <div class="row g-4">
+        <div class="col-md-6">
+          <h4>Tentang Saya</h4>
+          <p>
+            Saya adalah mahasiswi yang suka belajar hal baru dan menikmati proses berkembang. Saya senang mencoba
+            tantangan baru dan berusaha konsisten untuk jadi versi terbaik dari diri saya.
+          </p>
+
+          <h4 class="mt-4">Pengalaman</h4>
+          <ul class="mb-0">
+            <li>Bootcamp SMK se-Indonesia Tahun 2022</li>
+            <li>Kepala Divisi Civic Affairs Departemen Relacs Kabinet Cakrawira</li>
+            <li>Koordinator Konsumsi Inforsa Mengabdi Tahun 2025</li>
+          </ul>
+        </div>
+
+        <div class="col-md-6">
+          <h4>Skills</h4>
+
+          <p class="mb-1">Public Speaking</p>
+          <div class="progress mb-3">
+            <div class="progress-bar" style="width: 80%">80%</div>
+          </div>
+
+          <p class="mb-1">Teamwork</p>
+          <div class="progress mb-3">
+            <div class="progress-bar" style="width: 90%">90%</div>
+          </div>
+
+          <p class="mb-1">Problem Solving</p>
+          <div class="progress mb-3">
+            <div class="progress-bar" style="width: 75%">75%</div>
+          </div>
+
+          <p class="mb-1">Time Management</p>
+          <div class="progress">
+            <div class="progress-bar" style="width: 85%">85%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="certificates" class="py-5">
+    <div class="section-decor"></div>
+
+    <div class="container">
+      <h2 class="text-center mb-5">Certificates</h2>
+
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card certificate-card h-100 shadow-sm">
+            <img src="img/sertif2.jpg" class="card-img-top" alt="Sertifikat 1" />
+            <div class="card-body text-center">
+              <h5 class="card-title">Kegiatan KC</h5>
+              <p class="card-text">2025</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card certificate-card h-100 shadow-sm">
+            <img src="img/sertif1.jpg" class="card-img-top" alt="Sertifikat 2" />
+            <div class="card-body text-center">
+              <h5 class="card-title">INFORSA</h5>
+              <p class="card-text">2024</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card certificate-card h-100 shadow-sm">
+            <img src="img/sertif3.jpg" class="card-img-top" alt="Sertifikat 3" />
+            <div class="card-body text-center">
+              <h5 class="card-title">Upgrading INFORSA</h5>
+              <p class="card-text">2025</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    const navLinks = document.querySelectorAll('.nav-link');
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        if (navbarCollapse.classList.contains('show')) {
+          new bootstrap.Collapse(navbarCollapse).hide();
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
